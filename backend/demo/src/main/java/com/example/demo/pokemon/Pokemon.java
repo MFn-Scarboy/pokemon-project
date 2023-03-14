@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-import javax.persistence.Id;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Document
 public class Pokemon {
@@ -15,14 +13,14 @@ public class Pokemon {
 
     private String name;
 
-    private String description;
+    private String types;
 
     private String imageRef;
 
-    public Pokemon(String id, String name, String description, String imageRef) {
+    public Pokemon(String id, String name, String types, String imageRef) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.types = types;
         this.imageRef = imageRef;
     }
 
@@ -42,12 +40,12 @@ public class Pokemon {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTypes() {
+        return types;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTypes(String types) {
+        this.types = types;
     }
 
     public String getImageRef() {

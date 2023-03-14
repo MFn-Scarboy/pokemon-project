@@ -1,5 +1,5 @@
 * {
-
+  box-sizing: border-box;
 }
 
 body {
@@ -15,4 +15,112 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
+}
+
+/*AddTrainerForm*/
+
+.addTrainerForm-div {
+  padding-top: 0.1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  width: 25em;
+  height: 2em;
+  background-color: navajowhite;
+  border: solid black;
+  border-radius: 0.3em;
+  align-content: center;
+}
+
+.addTrainerForm-div--label {
+  margin-left: 0.3em;
+}
+
+.addTrainerForm-div--input {
+  margin-left: 0.4em;
+}
+
+.addTrainerForm-div--select {
+  margin-left: 0.5em;
+}
+
+.addTrainerForm-div--button {
+  background-color: white;
+  margin-left: 0.3em;
+  border-radius: 0.3em;
+}
+
+/*TeamCard*/
+
+.teamCard-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: solid black;
+  /*width: 17em;*/
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/*Trainer*/
+
+.trainer-div {
+  /*width: 12em;*/
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.trainer-div--img {
+  width: 6em;
+  height: 8em;
+}
+
+.trainer-div--name {
+  margin-left: 1em;
+  margin-bottom: 2em;
+}
+
+/*Pokemon*/
+
+.pokemon-div {
+  width: 13em;
+  border: black solid;
+  margin-top: 0.2em;
+}
+
+.pokemon-div--name {
+  font-size: 90%;
+}
+
+.pokemon-div--description {
+  font-size: 90%;
+}
+
+.pokemon-div--img {
+  width: 40%;
+  height: 40%;
+}
+
+.pokemon-div--li {
+  list-style: none;
+}
+
+/*AddPokemonForm*/
+
+.addPokemonForm-div {
+  margin-left: 1em;
+  width: 16em;
+  display: flex;
+}
+
+.addPokemonForm-div--form {
+  width: 11em;
+}
+
+.addPokemonForm-div--input {
+  margin-top: 0.3em;
+  width: 8em;
+}
+
+.addPokemonForm-div--button {
+
 }
