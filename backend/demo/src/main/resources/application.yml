@@ -1,0 +1,16 @@
+#spring.data.mongodb.authentication-database=admin
+#spring.data.mongodb.username=MFnScarboy
+#spring.data.mongodb.password=UqMXbyuETE5TaWA9
+#spring.data.mongodb.database=pokemon
+#spring.data.mongodb.port=27017
+#spring.data.mongodb.host=localhost
+spring:
+  data:
+    mongodb:
+      uri: mongodb://MFnScarboy:UqMXbyuETE5TaWA9@localhost:27017
+      database: pokemon
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: false
