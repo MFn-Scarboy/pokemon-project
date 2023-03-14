@@ -66,9 +66,6 @@ function AddPokemonForm(props : TrainerProps) {
             } catch (error) {
                 console.log("Could not add Pokemon to team" + error)
             }
-            console.log(pokemonName)
-            console.log(pokemonImg)
-            console.log(pokemonTypeReturn)
         } catch (error) {
             console.log("Enter a valid pokemon name")
         }

@@ -9,12 +9,19 @@ interface PokemonProps {
 }
 
 function Pokemon(props : PokemonProps) {
+
+    function handleRelease() {
+    //     try {
+    //         await axios.delete()
+    //     }
+    }
+
     return (
         <div className="pokemon-div">
             <img src={ props.imageRef } className="pokemon-div--img"/>
-            <h3 className="pokemon-div--name">{ props.name }</h3>
-            <h3 className="pokemon-div--description">Type(s): { props.types }</h3>
-            <button>release</button>
+            <h2 className="pokemon-div--name">{ props.name }</h2>
+            <h2 className="pokemon-div--description">Type(s): { props.types }</h2>
+            <button onClick={handleRelease}>release</button>
         </div>
     );
 }

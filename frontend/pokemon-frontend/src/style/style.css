@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: darkkhaki;
+  background-image: url("https://www.serebii.net/pokearth/maps/kanto-frlg/40.png");
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -27,7 +27,6 @@ code {
   width: 25em;
   height: 2em;
   background-color: navajowhite;
-  border: solid black;
   border-radius: 0.3em;
   align-content: center;
 }
@@ -54,9 +53,7 @@ code {
 
 .teamCard-div {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border: solid black;
-  /*width: 17em;*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -64,9 +61,11 @@ code {
 /*Trainer*/
 
 .trainer-div {
-  /*width: 12em;*/
+  width: 15em;
   margin-bottom: 1em;
   margin-left: 1em;
+  background-color: rgba(96, 110, 4, 0.8);
+
 }
 
 .trainer-div--img {
@@ -82,22 +81,21 @@ code {
 /*Pokemon*/
 
 .pokemon-div {
-  width: 13em;
-  border: black solid;
+  border: gray solid;
   margin-top: 0.2em;
 }
 
 .pokemon-div--name {
-  font-size: 90%;
+  font-size: 110%;
 }
 
 .pokemon-div--description {
-  font-size: 90%;
+  font-size: 110%;
 }
 
 .pokemon-div--img {
-  width: 40%;
-  height: 40%;
+  width: 60%;
+  height: 60%;
 }
 
 .pokemon-div--li {
@@ -107,6 +105,7 @@ code {
 /*AddPokemonForm*/
 
 .addPokemonForm-div {
+  margin-top: 1em;
   margin-left: 1em;
   width: 16em;
   display: flex;
