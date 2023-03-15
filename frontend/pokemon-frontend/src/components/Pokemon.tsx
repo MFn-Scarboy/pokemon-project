@@ -21,7 +21,7 @@ function Pokemon(props : PokemonProps) {
             <img src={ props.imageRef } className="pokemon-div--img"/>
             <h2 className="pokemon-div--name">{ props.name }</h2>
             <h2 className="pokemon-div--description">Type(s): { props.types }</h2>
-            <button onClick={handleRelease}>release</button>
+            {/*<button onClick={handleRelease}>release</button>*/}
         </div>
     );
 }

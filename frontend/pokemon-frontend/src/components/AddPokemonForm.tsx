@@ -14,16 +14,11 @@ interface AddPokemonValues {
 
 interface TrainerProps {
     id: string
+    pokemonAdded: Function
 
 }
 
 function AddPokemonForm(props : TrainerProps) {
-
-    const [count, setCount] = useState(0)
-
-    const handleClick = () => {
-        setCount(count + 1)
-    }
 
     const ref = React.useRef<HTMLInputElement>(null)
 
@@ -55,6 +50,7 @@ function AddPokemonForm(props : TrainerProps) {
             for(let i = 0; i < pokemonTypes.length; i++) {
                 pokemonTypeReturn = pokemonTypeReturn + pokemonTypes[i].type.name + ' ';
             }
+            props.pokemonAdded(true)
 
             try {
                 await axios.post<AddPokemonValues>('http://localhost:8080/' + props.id + '/pokemon', {
@@ -73,6 +69,12 @@ function AddPokemonForm(props : TrainerProps) {
         setFormValues({
             query: ''
         })
+    }
+
+    const [count, setCount] = useState(0)
+
+    const handleClick = () => {
+        setCount(count + 1)
     }
 
     // const countRef = useRef(0)

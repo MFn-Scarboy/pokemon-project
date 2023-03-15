@@ -81,7 +81,8 @@ code {
 /*Pokemon*/
 
 .pokemon-div {
-  border: gray solid;
+  border-bottom: gray solid;
+  border-top: gray solid;
   margin-top: 0.2em;
 }
 

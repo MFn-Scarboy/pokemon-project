@@ -1,17 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../style/style.css';
 import TeamCard from "./TeamCard";
 import AddTrainerForm from "./AddTrainerForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <AddTrainerForm/>
-          <TeamCard/>
 
-      </header>
-    </div>
+    const [trainer, setTrainer] = useState(false)
+    return (
+        <div className="App">
+            <AddTrainerForm trainerAdded={setTrainer}/>
+            <TeamCard trainerAdded={trainer} setTrainerAdded={setTrainer}/>
+
+        </div>
   );
 }
 

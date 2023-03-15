@@ -8,7 +8,12 @@ interface TrainerType {
     pokemon: []
 }
 
-function TeamCard() {
+interface TeamCardProps {
+    trainerAdded: boolean
+    setTrainerAdded: Function
+}
+
+function TeamCard(props: TeamCardProps) {
     const [trainers, setTrainers] = useState<TrainerType[]>([])
 
     useEffect(() => {
@@ -24,17 +29,15 @@ function TeamCard() {
                     })
                 })
                 setTrainers(trainers)
+                props.setTrainerAdded(false)
             })
-    }, [])
+    }, [props.trainerAdded])
 
     return (
         <div className="teamCard-div">
             {trainers.map((element, index) => (
                 <Trainer key={index} name={element.name} id={element.id} pokemon={element.pokemon}/>
             ))}
-            <ul className="teamCard-div-ul">
-
-            </ul>
         </div>
     );
 }

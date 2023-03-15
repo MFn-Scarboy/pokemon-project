@@ -7,7 +7,11 @@ interface AddTrainerFormValues {
     pokemon: [];
 }
 
-function AddTrainerForm() {
+interface AddTrainerProps {
+    trainerAdded: Function
+}
+
+function AddTrainerForm(props : AddTrainerProps) {
 
     const ref = React.useRef<HTMLInputElement>(null)
     React.useEffect(() => {
@@ -34,6 +38,7 @@ function AddTrainerForm() {
                 name: name,
                 pokemon: []
             })
+            props.trainerAdded(true)
         } catch (error) {
             console.log(error)
         }

@@ -19,7 +19,8 @@ interface PokemonType {
 
 const Trainer = (props : TrainerProps) => {
     const [pokemon, setPokemon] = useState<PokemonType[]>([])
-    const [showComponent, setShowComponent] = useState<boolean>(true)
+    //const [showComponent, setShowComponent] = useState<boolean>(true)
+    const [addPokemon, setAddPokemon] = useState(false)
 
     useEffect(() => {
         let pokemon: PokemonType[] = [];
@@ -34,14 +35,16 @@ const Trainer = (props : TrainerProps) => {
                         imageRef: element.imageRef
                     })
                 })
-                setPokemon(pokemon)
+                setAddPokemon(false)
+                return setPokemon(pokemon)
             })
-    }, [])
+    }, [addPokemon])
 
     async function deleteTrainer() {
         try {
             await axios.delete("http://localhost:8080/" + props.id)
-            setShowComponent(false)
+            //setShowComponent(false)
+            window.location.reload()
         }
         catch (error) {
             console.log(error)
@@ -56,7 +59,7 @@ const Trainer = (props : TrainerProps) => {
                 {pokemon.map((element, index) => (
                     <Pokemon key={index} name={element.name} id={element.id} types={element.types} imageRef={element.imageRef}/>
                 ))}
-            <AddPokemonForm id={props.id}/>
+            <AddPokemonForm pokemonAdded={setAddPokemon} id={props.id}/>
         </div>
     );
 }
